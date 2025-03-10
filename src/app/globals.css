@@ -13,7 +13,14 @@
     --foreground: #ededed;
   }
 }
-
+@font-face {
+  font-family:"DMSans-italic"; ;
+  src: url("../assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DMSans";
+  src: url("../assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
+}
 body {
   color: var(--foreground);
   background: var(--background);

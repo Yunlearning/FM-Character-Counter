@@ -1,18 +1,86 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+    darkMode: ['class'],
+    content: [
+        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    theme: {
+        extend: {
+            screens: {
+                // mobile: '375px',
+                // tablet: '768px',
+                // // tablet: '616px',
+                // desktop: '1440px',
+                mobile: '0px',
+                tablet: '768px',
+                desktop: '990px',
+            },
+            maxWidth: {
+                mobile: '375px',
+                tablet: '768px',
+                desktop: '990px',
+            },
+            colors: {
+                background: 'var(--background)',
+                foreground: 'var(--foreground)',
+                'neutral-0': 'hsl(0, 0%, 100%)',
+                'neutral-100': 'hsl(240, 24%, 96%)',
+                'neutral-200': 'hsl(240, 26%, 92%)',
+                'neutral-600': 'hsl(234, 14%, 29%)',
+                'neutral-700': 'hsl(235, 13%, 19%)',
+                'neutral-800': 'hsl(235, 14%, 15%)',
+                'neutral-900': 'hsl(233, 18%, 9%)',
+                'counter-purple-400': 'hsl(274, 90%, 80%)',
+                'counter-purple-500': 'hsl(274, 90%, 73%)',
+                'counter-yellow-500': '#FF9F00',
+                'counter-orange-500': '#FE8159',
+                'counter-orange-800': '#DA3701',
+            },
+            fontFamily: {
+                DMSans: ['DMSans', 'sans-serif'],
+                'DMSans-Italic': ['DMSans-Italic', 'sans-serif'],
+            },
+            fontSize: {
+                'preset-1': '4rem',
+                'preset-mobile-1': '2.5rem',
+                'preset-2': '1.5rem',
+                'preset-3': '1.25rem',
+                'preset-4': '1rem',
+            },
+            lineHeight: {
+                // 'preset-1': '100%',
+                // 'preset-2': '130%',
+                // 'preset-3': '140%',
+                // 'preset-4': '130%',
+                'preset-1': '1',
+                'preset-2': '1.3',
+                'preset-3': '1.4',
+                // 'preset-4': '1.3',
+            },
+            letterSpacing: {
+                'counter-1': '-1px',
+                'counter-2': '-0.6px',
+            },
+            borderRadius: {
+                'radius-0': '0',
+                'radius-4': '4px',
+                'radius-6': '6px',
+                'radius-8': '8px',
+                'radius-10': '10px',
+                'radius-12': '12px',
+                'radius-16': '16px',
+                'radius-20': '20px',
+                'radius-24': '24px',
+                'radius-full': '999px',
+            },
+            boxShadow: {
+                'error-light': '0px 0px 8px rgba(218, 55, 1, 0.8)',
+                'error-dark': '0px 0px 8px rgba(254, 129, 89, 0.8)',
+            },
+        },
     },
-  },
-  plugins: [],
+    plugins: [],
 } satisfies Config;
